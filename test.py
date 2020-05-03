@@ -4,7 +4,7 @@ def func(n):
     isFlag = True  # True = Primzahlen
 
     for i in range(2, n):
-        for j in range(2, int(math.sqrt(i))):
+        for j in range(2, i//2):
             if i % j == 0:
                 isFlag = False
                 break
@@ -13,5 +13,5 @@ def func(n):
             print(i)
         isFlag = True
 
-num = 10000000
+num = 50
 print(func(num))
